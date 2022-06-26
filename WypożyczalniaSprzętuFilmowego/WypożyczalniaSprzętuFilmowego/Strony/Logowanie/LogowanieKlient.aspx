@@ -43,9 +43,9 @@
                   </div>
 
                     <asp:Label ID="txtwynik" runat="server" Text=""></asp:Label>
-                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Nie masz konta? <a href="<%=Page.ResolveUrl("~/Interfejs/Klient/Rejestracja.aspx")%>"
+                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Nie masz konta? <a href="<%=Page.ResolveUrl("~/Strony/Logowanie/Rejestracja.aspx")%>"
                       style="color: #393f81;">Zarejestruj się tutaj!</a></p>
-                  <a class="small text-muted" href="<%=Page.ResolveUrl("~/Interfejs/Logowanie/Logowanieadmin.aspx")%>">Jesteś administratorem?</a>
+                  <a class="small text-muted" href="<%=Page.ResolveUrl("~/Strony/Logowanie/LogowanieAdmin.aspx")%>">Jesteś administratorem?</a>
                   
                 </form>
 

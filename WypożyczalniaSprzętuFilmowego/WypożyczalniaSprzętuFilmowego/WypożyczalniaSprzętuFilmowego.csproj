@@ -91,6 +91,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <Content Include="Strony\Logowanie\Rejestracja.aspx" />
+    <Content Include="Strony\Uzytkownik\KlientAktualne.aspx" />
+    <Content Include="Strony\Uzytkownik\KlientDostepne.aspx" />
+    <Content Include="Strony\Uzytkownik\KlientGlowna.aspx" />
+    <Content Include="Strony\Uzytkownik\KlientOpinia.aspx" />
+    <Content Include="Strony\Uzytkownik\KlientWypo.aspx" />
     <Content Include="Testowa.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -113,6 +118,41 @@
     </Compile>
     <Compile Include="Strony\Logowanie\Rejestracja.aspx.designer.cs">
       <DependentUpon>Rejestracja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strony\Uzytkownik\KlientAktualne.aspx.cs">
+      <DependentUpon>KlientAktualne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strony\Uzytkownik\KlientAktualne.aspx.designer.cs">
+      <DependentUpon>KlientAktualne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strony\Uzytkownik\KlientDostepne.aspx.cs">
+      <DependentUpon>KlientDostepne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strony\Uzytkownik\KlientDostepne.aspx.designer.cs">
+      <DependentUpon>KlientDostepne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strony\Uzytkownik\KlientGlowna.aspx.cs">
+      <DependentUpon>KlientGlowna.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strony\Uzytkownik\KlientGlowna.aspx.designer.cs">
+      <DependentUpon>KlientGlowna.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strony\Uzytkownik\KlientOpinia.aspx.cs">
+      <DependentUpon>KlientOpinia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strony\Uzytkownik\KlientOpinia.aspx.designer.cs">
+      <DependentUpon>KlientOpinia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strony\Uzytkownik\KlientWypo.aspx.cs">
+      <DependentUpon>KlientWypo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strony\Uzytkownik\KlientWypo.aspx.designer.cs">
+      <DependentUpon>KlientWypo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Testowa.aspx.cs">
       <DependentUpon>Testowa.aspx</DependentUpon>
