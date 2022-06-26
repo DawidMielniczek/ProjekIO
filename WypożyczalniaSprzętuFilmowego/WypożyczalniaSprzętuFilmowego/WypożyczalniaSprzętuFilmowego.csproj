@@ -85,6 +85,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Strony\Administrator\AdminDodajGre.aspx" />
+    <Content Include="Strony\Administrator\AdminGlowna.aspx" />
+    <Content Include="Strony\Administrator\AdminOpinie.aspx" />
+    <Content Include="Strony\Administrator\AdminUsunGre.aspx" />
+    <Content Include="Strony\Administrator\AdminUsunKlienta.aspx" />
     <Content Include="Strony\Logowanie\LogowanieAdmin.aspx" />
     <Content Include="Strony\Logowanie\LogowanieKlient.aspx" />
     <EmbeddedResource Include="hibernate.cfg.xml">
@@ -105,6 +110,41 @@
     </Compile>
     <Compile Include="Hibernate\NhibernateBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strony\Administrator\AdminDodajGre.aspx.cs">
+      <DependentUpon>AdminDodajGre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strony\Administrator\AdminDodajGre.aspx.designer.cs">
+      <DependentUpon>AdminDodajGre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strony\Administrator\AdminGlowna.aspx.cs">
+      <DependentUpon>AdminGlowna.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strony\Administrator\AdminGlowna.aspx.designer.cs">
+      <DependentUpon>AdminGlowna.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strony\Administrator\AdminOpinie.aspx.cs">
+      <DependentUpon>AdminOpinie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strony\Administrator\AdminOpinie.aspx.designer.cs">
+      <DependentUpon>AdminOpinie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strony\Administrator\AdminUsunGre.aspx.cs">
+      <DependentUpon>AdminUsunGre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strony\Administrator\AdminUsunGre.aspx.designer.cs">
+      <DependentUpon>AdminUsunGre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strony\Administrator\AdminUsunKlienta.aspx.cs">
+      <DependentUpon>AdminUsunKlienta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strony\Administrator\AdminUsunKlienta.aspx.designer.cs">
+      <DependentUpon>AdminUsunKlienta.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Strony\Logowanie\LogowanieAdmin.aspx.cs">
       <DependentUpon>LogowanieAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
