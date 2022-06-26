@@ -74,7 +74,7 @@
                 <asp:ListItem>5</asp:ListItem>
              </asp:DropDownList>
         </div>
-                     <asp:button ID="Btn" runat="server" class="btn btn-dark btn-lg btn-block" Text="Dodaj" />
+                     <asp:button ID="Btn" runat="server" class="btn btn-dark btn-lg btn-block" Text="Dodaj" OnClick="Btn_Click" />
              </form>
             </div>
               <asp:Label ID="txtwynik" runat="server" Text=""></asp:Label>

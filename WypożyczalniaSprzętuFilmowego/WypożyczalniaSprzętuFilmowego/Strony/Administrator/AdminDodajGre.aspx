@@ -70,7 +70,7 @@
             </center>
                   </div>
          <center>
-                     <asp:button ID="Btn" runat="server" class="btn btn-dark btn-lg btn-block" Text="Dodaj" />
+                     <asp:button ID="Btn" runat="server" class="btn btn-dark btn-lg btn-block" Text="Dodaj" OnClick="Btn_Click" />
           </center>
              </form>
   </div>
