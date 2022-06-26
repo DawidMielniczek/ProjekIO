@@ -34,7 +34,7 @@
         </li>
         <li class="nav-item active">
           <li class="nav-item">
-          <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Administrator/AdminUsunGre.aspx")%>">Usuń gre</a>
+          <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Administrator/AdminUsunGre.aspx")%>">Usuń Sprzęt</a>
         </li>
          <li class="nav-item active">
           <li class="nav-item">
@@ -58,7 +58,7 @@
   </div>
     <form runat="server">
     <div class="container">
-        <asp:DropDownList ID="ddlGra" CssClass="form-control" runat="server" Width="10%"></asp:DropDownList><br />
+        <asp:DropDownList ID="ddlSprzet" CssClass="form-control" runat="server" Width="10%"></asp:DropDownList><br />
         <asp:Button ID="btn_usun" class="btn btn-dark btn-lg btn-block" runat="server" Text="Usuń sprzęt" OnClick="btn_usun_Click" />
     </div>
     </form>

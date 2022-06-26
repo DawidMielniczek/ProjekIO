@@ -56,7 +56,7 @@
 <section class="py-5">
   <div class="container">
       <form runat="server">
-        <asp:GridView ID="tabopinie" cssClass="table" runat="server">
+        <asp:GridView ID="tabopinie" cssClass="table" style="color:white;" runat="server">
             
         </asp:GridView>
           </form>
