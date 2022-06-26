@@ -105,6 +105,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\WypożyczalniaApi.cs" />
     <Compile Include="Dto\IdAdmin.cs" />
     <Compile Include="Dto\IdKlienta.cs" />
     <Compile Include="Dto\IdOpini.cs" />
@@ -220,19 +221,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Mapping\Sprzet.hbm">
+    <EmbeddedResource Include="Mapping\Sprzet.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mapping\Opinia.hbm">
+    <EmbeddedResource Include="Mapping\Opinia.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mapping\Admin.hbm">
+    <EmbeddedResource Include="Mapping\Admin.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mapping\Klient.hbm">
+    <EmbeddedResource Include="Mapping\Klient.hbm.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <Content Include="Mapping\Wydarzenie.hbm" />
+    <EmbeddedResource Include="Mapping\Wydarzenie.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -242,7 +245,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Api\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
