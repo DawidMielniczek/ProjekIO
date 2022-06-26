@@ -109,6 +109,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Hibernate\NhibernateBase.cs" />
+    <Compile Include="Mapping\Admin.cs" />
+    <Compile Include="Mapping\Klient.cs" />
+    <Compile Include="Mapping\Opinia.cs" />
+    <Compile Include="Mapping\Sprzet.cs" />
+    <Compile Include="Mapping\Wydarzenie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strony\Administrator\AdminDodajGre.aspx.cs">
       <DependentUpon>AdminDodajGre.aspx</DependentUpon>
@@ -210,6 +215,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Mapping\Sprzet.hbm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\Opinia.hbm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\Admin.hbm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping\Klient.hbm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Mapping\Wydarzenie.hbm" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -221,6 +239,7 @@
   <ItemGroup>
     <Folder Include="Api\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Dto\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

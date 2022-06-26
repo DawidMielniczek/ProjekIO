@@ -30,7 +30,7 @@
             <!-- poszczególne nazwy .zakladek-->
                
           <li class="nav-item">
-          <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Administrator/AdminDodajGre.aspx")%>">Dodaj gre</a>
+          <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Administrator/AdminDodajGre.aspx")%>">Dodaj sprzętu</a>
         </li>
         <li class="nav-item active">
           <li class="nav-item">
@@ -61,10 +61,10 @@
               <div class="form-outline form-white mb-4">
                   <center>
                        <label style="color:white;"> Nazwa gry</label>&nbsp;
-                  <asp:TextBox ID="Txt1" runat="server" class="form-control form-control-lg" Width="500px" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+                  <asp:TextBox ID="Txt1" runat="server" class="form-control form-control-lg" Width="500px" ></asp:TextBox>
                  <br />
                       <label style="color:white;"> Dostępność</label><br />
-                  <asp:TextBox ID="Txt2" runat="server" class="form-control form-control-lg" Width="500px" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+                  <asp:TextBox ID="Txt2" runat="server" class="form-control form-control-lg" Width="500px" ></asp:TextBox>
                   
                  
             </center>

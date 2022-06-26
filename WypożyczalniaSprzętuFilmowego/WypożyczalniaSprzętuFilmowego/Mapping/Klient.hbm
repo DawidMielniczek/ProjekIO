@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping namespace="WypożyczalniaSprzętuFilmowego.Mapping" assembly="WypożyczalniaSprzętuFilmowego"
+xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Klient" table="Klient">
+		<id name="KlientId" column="KlientId" type="Int32">
+			<generator class="native" />
+		</id>
+		<property name="Imie" type="String" column="Imie" length="100" />
+		<property name="Nazwisko" type="String" column="Nazwisko" length="100" />
+		<property name="Email" type="String" column="Email" length="100" />
+		<property name="Telefon" type="String" column="Telefon" length="9" />
+		<property name="Haslo" type="String" column="Haslo" length="100" />
+		<property name="Pesel" type="String" column="Pesel" length="11" />
+	</class>
+</hibernate-mapping>

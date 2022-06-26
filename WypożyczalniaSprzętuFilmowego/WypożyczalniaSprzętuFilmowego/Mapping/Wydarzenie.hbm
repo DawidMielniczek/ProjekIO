@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping namespace="WypożyczalniaSprzętuFilmowego.Mapping" assembly="WypożyczalniaSprzętuFilmowego"
+xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Wydarzenie" table="Wydarzenie">
+		<id name="WydarzenieId" column="WydarzenieId" type="Int32">
+			<generator class="native" />
+		</id>
+		<property name="KlientId" type="int" column="KlientId"  />
+		<property name="SprzetId" type="int" column="SprzetId"  />
+		<property name="DataWyp" type="Date" column="DataWyp" length="100" />
+	</class>
+</hibernate-mapping>

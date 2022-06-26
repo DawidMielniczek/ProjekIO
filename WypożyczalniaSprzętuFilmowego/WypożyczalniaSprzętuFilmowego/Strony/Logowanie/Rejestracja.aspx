@@ -63,7 +63,7 @@
                 </div>                
 
                 <div class="d-flex justify-content-end pt-3">
-                  <asp:button ID="Btn_Rejestracja" type="submit" runat="server" class="btn btn-dark btn-lg btn-block" Text="Rejestracja" OnClick="Btn_Rejestracja_Click"/>
+                  <asp:button ID="Btn_Rejestracja" type="submit" runat="server" class="btn btn-dark btn-lg btn-block" Text="Rejestracja" />
                 </div>
                       
               </div>
