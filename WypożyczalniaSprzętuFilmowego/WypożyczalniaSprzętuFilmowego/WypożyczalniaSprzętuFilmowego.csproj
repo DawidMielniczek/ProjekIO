@@ -85,9 +85,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Strony\Logowanie\LogowanieAdmin.aspx" />
+    <Content Include="Strony\Logowanie\LogowanieKlient.aspx" />
     <EmbeddedResource Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <Content Include="Strony\Logowanie\Rejestracja.aspx" />
     <Content Include="Testowa.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -97,12 +100,33 @@
     </Compile>
     <Compile Include="Hibernate\NhibernateBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strony\Logowanie\LogowanieAdmin.aspx.cs">
+      <DependentUpon>LogowanieAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strony\Logowanie\LogowanieAdmin.aspx.designer.cs">
+      <DependentUpon>LogowanieAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strony\Logowanie\Rejestracja.aspx.cs">
+      <DependentUpon>Rejestracja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strony\Logowanie\Rejestracja.aspx.designer.cs">
+      <DependentUpon>Rejestracja.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Testowa.aspx.cs">
       <DependentUpon>Testowa.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Testowa.aspx.designer.cs">
       <DependentUpon>Testowa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Strony\Logowanie\LogowanieKlient.aspx.cs">
+      <DependentUpon>LogowanieKlient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Strony\Logowanie\LogowanieKlient.aspx.designer.cs">
+      <DependentUpon>LogowanieKlient.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
