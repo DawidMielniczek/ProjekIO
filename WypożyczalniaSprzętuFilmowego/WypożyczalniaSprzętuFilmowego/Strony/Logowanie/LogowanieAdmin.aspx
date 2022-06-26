@@ -42,7 +42,7 @@
                   </div>
 
                     <asp:Label ID="txtwynik" runat="server" Text=""></asp:Label>
-                  <a class="small text-muted" href="<%=Page.ResolveUrl("~/Interfejs/Logowanie/Logowanieklient.aspx")%>">Zabłądziłeś? Jesteś użytkownikiem?</a>
+                  <a class="small text-muted" href="<%=Page.ResolveUrl("~/Strony/Logowanie/LogowanieKlient.aspx")%>">Zabłądziłeś? Jesteś użytkownikiem?</a>
                   
                 </form>
 
