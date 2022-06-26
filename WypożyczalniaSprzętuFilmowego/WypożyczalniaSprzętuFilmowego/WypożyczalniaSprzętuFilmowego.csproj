@@ -105,6 +105,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\IdAdmin.cs" />
+    <Compile Include="Dto\IdKlienta.cs" />
+    <Compile Include="Dto\IdOpini.cs" />
+    <Compile Include="Dto\IdSprzet.cs" />
+    <Compile Include="Dto\IdWydarzenia.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -239,7 +244,6 @@
   <ItemGroup>
     <Folder Include="Api\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Dto\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
