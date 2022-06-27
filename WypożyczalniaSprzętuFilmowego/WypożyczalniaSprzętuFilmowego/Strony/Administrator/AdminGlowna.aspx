@@ -58,6 +58,9 @@
       <!--opis firmy-->
     <h1 style="font-weight:bold" class="fw-light" >PANEL ADMINISTRATORA</h1>
     <p class="lead">Wybierz jedną z funkcjonalności na pasku nawigacyjnym</p>
+      <form runat="server">      
+          <asp:GridView ID="gvSprzety" cssClass="table" style="color:white;" runat="server"> </asp:GridView>
+            </form>
   </div>
 </section>
 </body>

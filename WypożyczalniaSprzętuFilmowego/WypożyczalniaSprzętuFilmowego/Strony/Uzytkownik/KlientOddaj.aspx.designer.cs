@@ -11,7 +11,7 @@ namespace WypożyczalniaSprzętuFilmowego.Strony.Uzytkownik
 {
 
 
-    public partial class KlientWypo
+    public partial class KlientOddaj
     {
 
         /// <summary>
@@ -33,12 +33,12 @@ namespace WypożyczalniaSprzętuFilmowego.Strony.Uzytkownik
         protected global::System.Web.UI.WebControls.TextBox TxtId;
 
         /// <summary>
-        /// Kontrolka wypozyczbt.
+        /// Kontrolka OddajS.
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
         /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button wypozyczbt;
+        protected global::System.Web.UI.WebControls.Button OddajS;
     }
 }

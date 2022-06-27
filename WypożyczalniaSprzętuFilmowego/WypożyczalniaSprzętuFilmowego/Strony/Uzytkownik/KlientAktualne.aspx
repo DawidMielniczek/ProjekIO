@@ -39,6 +39,9 @@
            <li class="nav-item">
           <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Uzytkownik/KlientWypo.aspx")%>">Wypożycz</a>
         </li>
+          <li class="nav-item">
+          <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Uzytkownik/KlientOddaj.aspx")%>">Zwróć</a>
+        </li>
         </ul>
 
         <form class="">
@@ -52,13 +55,13 @@
 <section style="color:white; font-family:sans-serif" class="py-5">
   <div class="container">
       <!--wypozyczenia - opis, ropziska-->
-    <h1 class="fw-light" style="font-weight:bold">Twoje wypożyczenia:</h1>
+    <h1 class="fw-light" style="font-weight:bold; color:white;">Twoje wypożyczenia:</h1>
     <form runat ="server">
          <div class="form-group">
-            <asp:GridView ID="GAktualneWyp" cssClass="table" runat="server"></asp:GridView>
+            <asp:GridView ID="GAktualneWyp" Style="color:white;" CssClass="table" runat="server"></asp:GridView>
         </div>
         <div class="container">
-            <asp:Label ID="lvlKara" runat="server" class="form-label" for="wpiszloginA">Twoje Aktualne kary za nieterminowy zwrot wynosi: </asp:Label>
+            <asp:Label ID="lvlKara" ForeColor="White" runat="server" class="form-label" for="wpiszloginA">Twoje Aktualne kary za nieterminowy zwrot wynosi: </asp:Label>
         </div>
      </form>
   </div>

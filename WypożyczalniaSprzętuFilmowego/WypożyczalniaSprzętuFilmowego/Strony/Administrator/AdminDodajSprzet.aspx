@@ -63,10 +63,7 @@
                        <label style="color:white;"> Nazwa gry</label>&nbsp;
                   <asp:TextBox ID="Txt1" runat="server" class="form-control form-control-lg" Width="500px" ></asp:TextBox>
                  <br />
-                      <label style="color:white;"> Dostępność</label><br />
-                  <asp:TextBox ID="Txt2" runat="server" class="form-control form-control-lg" Width="500px" ></asp:TextBox>
-                  
-                 
+                   
             </center>
                   </div>
          <center>

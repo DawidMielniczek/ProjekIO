@@ -17,15 +17,12 @@ namespace WypożyczalniaSprzętuFilmowego.Strony.Uzytkownik
 
         protected void Btn_Click(object sender, EventArgs e)
         {
+            var opinia = Opinia.Text;
+            var ocena = Convert.ToInt32(ddlOcena.Text);
             WypożyczalniaApi api = new WypożyczalniaApi();
-            var DodajOpinie = new Mapping.Opinia()
-            {
-                Opis = Opinia.Text,
-                Ocena = ddlOcena.SelectedIndex,
-
-            };
-            api.dodajOpinie(DodajOpinie);
-            Response.Redirect("~/Interfejs/Klient/klientglowna.aspx");
+            api.DodajOpinie(opinia, ocena);
+            
+            Response.Redirect("~/Strony/Uzytkownik/KlientGlowna.aspx");
         }
     }
 }

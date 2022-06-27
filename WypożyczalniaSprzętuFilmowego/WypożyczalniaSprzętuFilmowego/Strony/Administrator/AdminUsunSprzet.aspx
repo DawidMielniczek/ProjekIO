@@ -58,7 +58,9 @@
   </div>
     <form runat="server">
     <div class="container">
-        <asp:DropDownList ID="ddlSprzet" CssClass="form-control" runat="server" Width="10%"></asp:DropDownList><br />
+        <asp:GridView style="color:white; font-family:sans-serif" ID="gvSprzet" cssClass="table" runat="server"></asp:GridView><br />
+        <label style ="color:white;">Podaj Id Sprzętu do usunięcia:</label>
+        <asp:TextBox ID="TxtId" runat="server" Width="4%" ></asp:TextBox><br />
         <asp:Button ID="btn_usun" class="btn btn-dark btn-lg btn-block" runat="server" Text="Usuń sprzęt" OnClick="btn_usun_Click" />
     </div>
     </form>

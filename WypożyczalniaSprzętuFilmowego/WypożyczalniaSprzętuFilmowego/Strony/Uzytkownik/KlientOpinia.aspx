@@ -39,6 +39,9 @@
            <li class="nav-item">
           <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Uzytkownik/KlientWypo.aspx")%>">Wypożycz</a>
         </li>
+            <li class="nav-item">
+          <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Uzytkownik/KlientOddaj.aspx")%>">Zwróć</a>
+        </li>
         </ul>
 
         <form class="">
@@ -48,15 +51,12 @@
     </div>
   </nav>
         </div>
-
 <section style="background-color:black"  class="vh-100 gradient-custom">
   <div class="container py-5 h-100" >
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
           <div class="p-5 text-center">
-
             <div class="mb-md-5 mt-md-4 pb-5" ">
-
               <h2 class="fw-bold mb-2 text-uppercase" style="color:white">Dodaj opinie</h2>
               <p class="text-white-50 mb-5"> </p>
               <form runat ="server">
@@ -78,7 +78,6 @@
              </form>
             </div>
               <asp:Label ID="txtwynik" runat="server" Text=""></asp:Label>
-              
           </div>
         </div>
       </div>

@@ -21,25 +21,18 @@ namespace WypożyczalniaSprzętuFilmowego.Strony.Uzytkownik
         {
             WypożyczalniaApi api = new WypożyczalniaApi();
             var q = Session["Id"];
-            var services = api.GetWypożyczenia(Convert.ToInt32(q));
+            var services = api.GetWydarzenie(Convert.ToInt32(q));
 
             if (services.Count >= 1)
             {
-                List<IdSprzet> result = new List<IdSprzet>();
-                for (int i = 0; i < services.Count; i++)
-                {
-                    api.IdWyp = services[i].SprzetId;
-                    var wypo = api.GetStatus(api.IdWyp);
-                    result.Add(new IdSprzet() { SprzetId = api.IdWyp, Nazwa = wypo[0].Nazwa, Dostepnosc = wypo[0].Dostepnosc });
-                }
-                GAktualneWyp.DataSource = result;
+                GAktualneWyp.DataSource = services;
                 GAktualneWyp.DataBind();
             }
             else
             {
                 GAktualneWyp.DataSource = null;
             }
-            string connection = @"Data Source= localhost;Initial Catalog=WypożyczalniaGier;Integrated Security=True";
+            string connection = @"Data Source= localhost;Initial Catalog=WypożyczalniaSprzetuFilmowego;Integrated Security=True";
             using (var con = new SqlConnection(connection))
             {
                 var dlug = 0;
