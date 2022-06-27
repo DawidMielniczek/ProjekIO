@@ -85,10 +85,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Strony\Administrator\AdminDodajGre.aspx" />
+    <Content Include="Strony\Administrator\AdminDodajSprzet.aspx" />
     <Content Include="Strony\Administrator\AdminGlowna.aspx" />
     <Content Include="Strony\Administrator\AdminOpinie.aspx" />
-    <Content Include="Strony\Administrator\AdminUsunGre.aspx" />
+    <Content Include="Strony\Administrator\AdminUsunSprzet.aspx" />
     <Content Include="Strony\Administrator\AdminUsunKlienta.aspx" />
     <Content Include="Strony\Logowanie\LogowanieAdmin.aspx" />
     <Content Include="Strony\Logowanie\LogowanieKlient.aspx" />
@@ -121,12 +121,12 @@
     <Compile Include="Mapping\Sprzet.cs" />
     <Compile Include="Mapping\Wydarzenie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Strony\Administrator\AdminDodajGre.aspx.cs">
-      <DependentUpon>AdminDodajGre.aspx</DependentUpon>
+    <Compile Include="Strony\Administrator\AdminDodajSprzet.aspx.cs">
+      <DependentUpon>AdminDodajSprzet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Strony\Administrator\AdminDodajGre.aspx.designer.cs">
-      <DependentUpon>AdminDodajGre.aspx</DependentUpon>
+    <Compile Include="Strony\Administrator\AdminDodajSprzet.aspx.designer.cs">
+      <DependentUpon>AdminDodajSprzet.aspx</DependentUpon>
     </Compile>
     <Compile Include="Strony\Administrator\AdminGlowna.aspx.cs">
       <DependentUpon>AdminGlowna.aspx</DependentUpon>
@@ -142,12 +142,12 @@
     <Compile Include="Strony\Administrator\AdminOpinie.aspx.designer.cs">
       <DependentUpon>AdminOpinie.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Strony\Administrator\AdminUsunGre.aspx.cs">
-      <DependentUpon>AdminUsunGre.aspx</DependentUpon>
+    <Compile Include="Strony\Administrator\AdminUsunSprzet.aspx.cs">
+      <DependentUpon>AdminUsunSprzet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Strony\Administrator\AdminUsunGre.aspx.designer.cs">
-      <DependentUpon>AdminUsunGre.aspx</DependentUpon>
+    <Compile Include="Strony\Administrator\AdminUsunSprzet.aspx.designer.cs">
+      <DependentUpon>AdminUsunSprzet.aspx</DependentUpon>
     </Compile>
     <Compile Include="Strony\Administrator\AdminUsunKlienta.aspx.cs">
       <DependentUpon>AdminUsunKlienta.aspx</DependentUpon>

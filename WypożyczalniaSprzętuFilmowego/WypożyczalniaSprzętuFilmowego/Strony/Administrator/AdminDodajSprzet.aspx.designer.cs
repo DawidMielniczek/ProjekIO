@@ -1,17 +1,17 @@
 ﻿//------------------------------------------------------------------------------
-// <generowane automatycznie>
+// <generowany automatycznie>
 //     Ten kod został wygenerowany przez narzędzie.
 //
-//     Zmiany w tym pliku mogą spowodować niewłaściwe zachowanie i zostaną utracone
+//     Modyfikacje tego pliku mogą spowodować niewłaściwe zachowanie i zostaną utracone
 //     w przypadku ponownego wygenerowania kodu. 
-// </generowane automatycznie>
+// </generowany automatycznie>
 //------------------------------------------------------------------------------
 
 namespace WypożyczalniaSprzętuFilmowego.Strony.Administrator
 {
 
 
-    public partial class AdminDodajGre
+    public partial class AdminDodajSprzet
     {
 
         /// <summary>
@@ -19,7 +19,7 @@ namespace WypożyczalniaSprzętuFilmowego.Strony.Administrator
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Txt1;
 
@@ -28,7 +28,7 @@ namespace WypożyczalniaSprzętuFilmowego.Strony.Administrator
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Txt2;
 
@@ -37,7 +37,7 @@ namespace WypożyczalniaSprzętuFilmowego.Strony.Administrator
         /// </summary>
         /// <remarks>
         /// Pole generowane automatycznie.
-        /// Aby wprowadzić zmiany, przenieś deklarację pola z pliku projektanta do pliku codebehind.
+        /// By zmodyfikować deklaracje pola przenieś ją z pliku projektanta do pliku codebehind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Btn;
     }
