@@ -13,7 +13,7 @@ namespace WypożyczalniaSprzętuFilmowego.Strony.Uzytkownik
         protected void Page_Load(object sender, EventArgs e)
         {
             WypożyczalniaApi api = new WypożyczalniaApi();
-            var sprawdz = api.GetGry();
+            var sprawdz = api.GetSprzetD();
             gvGry.DataSource = sprawdz;
             gvGry.DataBind();
         }

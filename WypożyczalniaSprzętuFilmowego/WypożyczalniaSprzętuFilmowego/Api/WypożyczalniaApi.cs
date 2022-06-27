@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using WypożyczalniaSprzętuFilmowego.Dto;
@@ -10,6 +12,8 @@ namespace WypożyczalniaSprzętuFilmowego.Api
 {
     public class WypożyczalniaApi
     {
+        string connection = @"Server = localhost; Database= WypożyczalniaSprzetuFilmowego; Trusted_connection=True";
+
         public WypożyczalniaApi()
         {
             NhibernateBase nHibernate = new NhibernateBase();
@@ -42,34 +46,18 @@ namespace WypożyczalniaSprzętuFilmowego.Api
                     }).ToList();
             }
         }
-        public List<IdWydarzenia> GetWypożyczenia(int ID)
+        public List<IdSprzet> GetWydarzenie(int q)
         {
-            using (var session = NhibernateBase.Session)
+            using (var con = new SqlConnection(connection))
             {
-                return session.Query<Wydarzenie>().Select(
-                    x => new IdWydarzenia
-                    {
-                        WydarzenieId = x.WydarzenieId,
-                        KlientId = x.KlientId,
-                        DataWyp = x.DataWyp,
-                        SprzetId = x.SprzetId
-                    }).Where(x => x.KlientId == ID).ToList();
-            }
-        }
-        public List<IdSprzet> GetStatus(int IdWyp)
-        {
-            using (var session = NhibernateBase.Session)
-            {
-                return session.Query<Sprzet>().Select(
-                    x => new IdSprzet
-                    {
-                        SprzetId = x.SprzetId,
-                        Nazwa = x.Nazwa,
-                        Dostepnosc = x.Dostepnosc
-                    }).Where(x => x.SprzetId == IdWyp).ToList();
+                con.Open();
+                
+                var result = con.Query<IdSprzet>("Select Sprzet.SprzetId,Sprzet.Nazwa,Sprzet.Dostepnosc from Sprzet,Wydarzenie Where Sprzet.SprzetId = Wydarzenie.SprzetId AND Wydarzenie.KlientId=" + q).ToList();
 
+                return result;
             }
         }
+        
 
         public void Rejestracja(Klient rejestracja)
         {
@@ -79,6 +67,40 @@ namespace WypożyczalniaSprzętuFilmowego.Api
             }
         }
 
+        public List<IdSprzet> GetSprzetD()
+        {
+            string connection = @"Server = localhost; Database= WypożyczalniaSprzetuFilmowego; Trusted_connection=True";
+            using (var con = new SqlConnection(connection))
+            {
+                con.Open();
+                var result = con.Query<IdSprzet>("Select * from Sprzet where Dostepnosc ='tak'").ToList();
+                return result;
+            }
+        }
+        public void Usun(Klient klient)
+        {
+            using (var session = NhibernateBase.Session)
+            {
+                session.Delete(klient);
+                session.Refresh(klient);
+                session.Flush();
+            }
+        }
+        public void DodajOpinie(string opinia, int ocena)
+        {
+            string connection = @"Server = localhost; Database= WypożyczalniaSprzetuFilmowego; Trusted_connection=True";
+            using (var con = new SqlConnection(connection))
+            {
+                con.Open();
+
+                var Query = @"INSERT INTO Opinia VALUES
+                            (@opinia,@ocena)";
+                var db = new DynamicParameters();
+                db.Add("@opinia", opinia);
+                db.Add("@ocena", ocena);
+                int result = con.Execute(Query, db);
+            }
+        }
         public List<IdKlienta> GetKlientas()
         {
             using (var session = NhibernateBase.Session)
@@ -96,44 +118,31 @@ namespace WypożyczalniaSprzętuFilmowego.Api
                     }).ToList();
             }
         }
-        public void Usun(Klient klient)
+        public void DodajSprzet(string Nazwa)
         {
-            using (var session = NhibernateBase.Session)
+            string connection = @"Server =localhost; Database= WypożyczalniaSprzetuFilmowego; Trusted_connection=True";
+            using (var con = new SqlConnection(connection))
             {
-                session.Delete(klient);
-                session.Refresh(klient);
-                //nie mam pojęcia dlaczego ale bez Flush() nie usuwa a jak nie damy wcześniej Refresh() to wywala błąd także nie usuwać mimo że jest błędem
-                session.Flush();
+                con.Open();
+
+                var Query = @"INSERT INTO Sprzet VALUES
+                            (@Name,'tak')";
+                var db = new DynamicParameters();
+                db.Add("@Name", Nazwa);
+                int result = con.Execute(Query, db);
             }
         }
-        public void dodajOpinie(Opinia DodajOpinie)
+        public List<IdSprzet> GetSprzety()
         {
-            using (var session = NhibernateBase.Session)
+            string connection = @"Server = localhost; Database= WypożyczalniaSprzetuFilmowego; Trusted_connection=True";
+            using (var con = new SqlConnection(connection))
             {
-                session.Save(DodajOpinie);
-            }
-        }
-        public void dodajSprzet(Sprzet DodajSprzet)
-        {
-            using (var session = NhibernateBase.Session)
-            {
-                session.Save(DodajSprzet);
+                con.Open();
+                var result = con.Query<IdSprzet>("Select * from Sprzet").ToList();
+                return result;
             }
         }
 
-        public List<IdSprzet> GetGry()
-        {
-            using (var session = NhibernateBase.Session)
-            {
-                return session.Query<Sprzet>().Select(
-                x => new IdSprzet
-                {
-                    SprzetId = x.SprzetId,
-                    Nazwa = x.Nazwa,
-                    Dostepnosc = x.Dostepnosc
-                }).Where(x => x.Dostepnosc == "tak").ToList();
-            }
-        }
         public List<IdOpini> GetOpinie()
         {
             using (var session = NhibernateBase.Session)
@@ -146,6 +155,44 @@ namespace WypożyczalniaSprzętuFilmowego.Api
                     Ocena = x.Ocena
                 }).ToList();
             }
+        }
+
+        public void UsuńSprzet(int id)
+        {
+            string connection = @"Server = localhost; Database= WypożyczalniaSprzetuFilmowego; Trusted_connection=True";
+
+            using (var con = new SqlConnection(connection))
+            {
+                con.Open();
+
+                var Query = @"delete from Sprzet where SprzetId=@id";
+
+                var db = new DynamicParameters();
+                db.Add("@id", id);
+                int result = con.Execute(Query, db);
+            }
+        }
+
+        public void AddWypo(int IdU, int Ids)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=WypożyczalniaSprzetuFilmowego;Trusted_Connection=True");
+            con.Open();
+            DateTime myDateTime = DateTime.Now;
+            string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss.fff");
+            SqlCommand cmdwypo = new SqlCommand("INSERT INTO Wydarzenie  VALUES( '" + IdU + "' , '" + Ids + "', '" + sqlFormattedDate + "')", con);
+            cmdwypo.ExecuteNonQuery();
+            SqlCommand updateg1 = new SqlCommand("Update Sprzet Set Dostepnosc = 'nie' Where SprzetId = " + Ids, con);
+            updateg1.ExecuteNonQuery();
+
+        }
+        public void OddajWypo(int Ids)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=WypożyczalniaSprzetuFilmowego;Trusted_Connection=True");
+            con.Open();
+            SqlCommand cmdwypo = new SqlCommand("Delete From  Wydarzenie where SprzetId= " + Ids, con);
+            cmdwypo.ExecuteNonQuery();
+            SqlCommand updateg1 = new SqlCommand("Update Sprzet Set Dostepnosc = 'tak' Where SprzetId = " + Ids, con);
+            updateg1.ExecuteNonQuery();
         }
     }
 }

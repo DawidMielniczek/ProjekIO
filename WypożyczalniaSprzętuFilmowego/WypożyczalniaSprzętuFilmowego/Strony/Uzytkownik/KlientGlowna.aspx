@@ -39,6 +39,9 @@
            <li class="nav-item">
           <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Uzytkownik/KlientWypo.aspx")%>">Wypożycz</a>
         </li>
+           <li class="nav-item">
+          <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Uzytkownik/KlientOddaj.aspx")%>">Zwróć</a>
+        </li>
         </ul>
 
         <form class="">

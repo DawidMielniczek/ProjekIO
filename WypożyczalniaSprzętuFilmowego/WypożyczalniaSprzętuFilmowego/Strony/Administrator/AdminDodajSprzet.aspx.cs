@@ -17,14 +17,9 @@ namespace WypożyczalniaSprzętuFilmowego.Strony.Administrator
 
         protected void Btn_Click(object sender, EventArgs e)
         {
+            var Nazwa = Txt1.Text;
             WypożyczalniaApi api = new WypożyczalniaApi();
-            var DodajSprzet = new Mapping.Sprzet()
-            {
-                Nazwa = Txt1.Text,
-                Dostepnosc = Txt2.Text,
-
-            };
-            api.dodajSprzet(DodajSprzet);
+            api.DodajSprzet(Nazwa);
             Response.Redirect("~/Strony/Administrator/AdminGlowna.aspx");
         }
     }

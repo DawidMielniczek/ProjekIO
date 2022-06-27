@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="KlientWypo.aspx.cs" Inherits="WypożyczalniaSprzętuFilmowego.Strony.Uzytkownik.KlientWypo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="KlientOddaj.aspx.cs" Inherits="WypożyczalniaSprzętuFilmowego.Strony.Uzytkownik.KlientOddaj" %>
 
 <!DOCTYPE html>
 
@@ -43,7 +43,6 @@
           <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Uzytkownik/KlientOddaj.aspx")%>">Zwróć</a>
         </li>
         </ul>
-
         <form class="">
           <a class="nav-link"  href="<%=Page.ResolveUrl("~/Strony/Logowanie/LogowanieKlient.aspx")%>">Wyloguj</a>
         </form>
@@ -56,23 +55,21 @@
     <form runat="server">
       <div class="container">
           <!--rozpiska dostepnych produktów-->
-         <h2 style="text-align:center;">Wypożycz coś dla siebie!</h2>
+         <h2 style="text-align:center;">Zwróć wypożyczony Sprzęt</h2>
           <br />
           <asp:GridView style="color:white; font-family:sans-serif" cssClass="table" ID="gvSprzet" runat="server"></asp:GridView>
       </div>
-    
     </section>
-
     <section class="py-5">   
             <div>
         <div class="container">
             <label Style="color:white;">Podaj Id Sprzętu:
             </label>
             <br />
-        <asp:TextBox ID="TxtId" runat="server"  Width="4%"></asp:TextBox><br />
+        <asp:TextBox ID="TxtId" runat="server"   Width="4%"></asp:TextBox><br />
             <br />
             <div>
-          <asp:button ID="wypozyczbt" runat="server" class="btn btn-dark btn-lg btn-block" Text="Wypożycz!" OnClick="wypozyczbt_Click"  />
+          <asp:button ID="OddajS" runat="server" class="btn btn-dark btn-lg btn-block" Text="Zwróć Sprzęt!" OnClick="wypozyczbt_Click"  />
             </div>
         </div>
         </div>
