@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminUsunGre.aspx.cs" Inherits="WypożyczalniaSprzętuFilmowego.Strony.Administrator.AdminUsunGre" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminUsunSprzet.aspx.cs" Inherits="WypożyczalniaSprzętuFilmowego.Strony.Administrator.AdminUsunSprzet" %>
 
 <!DOCTYPE html>
 
@@ -30,11 +30,11 @@
             <!-- poszczególne nazwy .zakladek-->
                
           <li class="nav-item">
-          <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Administrator/AdminDodajGre.aspx")%>">Dodaj gre</a>
+          <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Administrator/AdminDodajSprzet.aspx")%>">Dodaj sprzęt</a>
         </li>
         <li class="nav-item active">
           <li class="nav-item">
-          <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Administrator/AdminUsunGre.aspx")%>">Usuń Sprzęt</a>
+          <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Administrator/AdminUsunSprzet.aspx")%>">Usuń Sprzęt</a>
         </li>
          <li class="nav-item active">
           <li class="nav-item">

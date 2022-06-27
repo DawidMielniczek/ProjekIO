@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace WypożyczalniaSprzętuFilmowego.Strony.Administrator
 {
-    public partial class AdminUsunGre : System.Web.UI.Page
+    public partial class AdminUsunSprzet : System.Web.UI.Page
     {
         string conn = @"Data Source=localhost;Initial Catalog=WypożyczalniaSprzetuFilmowego;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)

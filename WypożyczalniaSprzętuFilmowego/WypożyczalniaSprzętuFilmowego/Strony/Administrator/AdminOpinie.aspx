@@ -30,11 +30,11 @@
             <!-- poszczególne nazwy .zakladek-->
                
           <li class="nav-item">
-          <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Administrator/AdminDodajGre.aspx")%>">Dodaj gre</a>
+          <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Administrator/AdminDodajSprzet.aspx")%>">Dodaj sprzęt</a>
         </li>
         <li class="nav-item active">
           <li class="nav-item">
-          <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Administrator/AdminUsunGre.aspx")%>">Usuń gre</a>
+          <a class="nav-link" href="<%=Page.ResolveUrl("~/Strony/Administrator/AdminUsunSprzet.aspx")%>">Usuń sprzęt</a>
         </li>
          <li class="nav-item active">
           <li class="nav-item">

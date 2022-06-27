@@ -8,7 +8,7 @@ using WypożyczalniaSprzętuFilmowego.Api;
 
 namespace WypożyczalniaSprzętuFilmowego.Strony.Administrator
 {
-    public partial class AdminDodajGre : System.Web.UI.Page
+    public partial class AdminDodajSprzet : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
